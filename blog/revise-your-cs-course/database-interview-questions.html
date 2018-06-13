@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>database-interview-questions</title><link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; white-space: pre-wrap; overflow-x: visible; }
+.first-line-indent #write p .md-line { text-indent: 0px; }
+.first-line-indent #write li, .first-line-indent #write p, .first-line-indent #write p .md-line:first-child { text-indent: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write > blockquote:first-child, #write > div:first-child, #write > figure:first-child, #write > ol:first-child, #write > p:first-child, #write > pre:first-child, #write > ul:first-child { margin-top: 30px; }
+#write li > figure:first-child { margin-top: -20px; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+h1, h2, h3, h4, h5, h6 { margin-top: 1rem; margin-bottom: 1rem; }
+p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
+.mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0px; -webkit-margin-after: 0px; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 80px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+pre { white-space: pre-wrap; }
+pre.contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-fences.mock-cm { white-space: pre-wrap; }
+.show-fences-line-number .md-fences { padding-left: 0px; }
+.show-fences-line-number .md-fences.mock-cm { padding-left: 40px; }
+.CodeMirror-line { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+.footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 1cm; padding-right: 1cm; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > img:only-child { display: block; margin: auto; }
+.md-line > .md-image:only-child, p > .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.mathjax-block { white-space: pre; overflow: hidden; width: 100%; }
+p + .mathjax-block { margin-top: -1.143rem; }
+.mathjax-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, tt { font-family: var(--monospace); }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.mathjax-block .MathJax_SVG_Display { text-align: center; margin: 1em 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: monospace; }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+
+
+:root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: normal; src: local("Open Sans Regular"), url("./github/400.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: normal; src: local("Open Sans Italic"), url("./github/400i.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: bold; src: local("Open Sans Bold"), url("./github/700.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: bold; src: local("Open Sans Bold Italic"), url("./github/700i.woff") format("woff"); }
+html { font-size: 16px; }
+body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
+#write { max-width: 860px; margin: 0px auto; padding: 20px 30px 100px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+body > :first-child { margin-top: 0px !important; }
+body > :last-child { margin-bottom: 0px !important; }
+a { color: rgb(65, 131, 196); }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 2px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; overflow: hidden; box-sizing: content-box; }
+body > h2:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child + h2 { margin-top: 0px; padding-top: 0px; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child { margin-top: 0px; padding-top: 0px; }
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 { margin-top: 0px; padding-top: 0px; }
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p { margin-top: 0px; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left: 4px solid rgb(223, 226, 229); padding: 0px 15px; color: rgb(119, 119, 119); }
+blockquote blockquote { padding-right: 0px; }
+table { padding: 0px; word-break: initial; }
+table tr { border-top: 1px solid rgb(223, 226, 229); margin: 0px; padding: 0px; }
+table tr:nth-child(2n), thead { background-color: rgb(248, 248, 248); }
+table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(223, 226, 229); border-right-color: rgb(223, 226, 229); border-left-color: rgb(223, 226, 229); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(223, 226, 229); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); }
+.md-fences, code, tt { border: 1px solid rgb(223, 226, 229); background-color: rgb(248, 248, 248); border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding: 8px 1em 6px; }
+.md-task-list-item > input { margin-left: -1.3em; }
+@media screen and (min-width: 914px) {
+}
+@media print {
+  html { font-size: 13px; }
+  table, pre { break-inside: avoid; }
+  pre { word-wrap: break-word; }
+}
+.md-fences { background-color: rgb(248, 248, 248); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.md-image > .md-meta { border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 0px 0px 4px; font-size: 0.9em; color: inherit; }
+.md-tag { color: inherit; }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+.sidebar-tabs { border-bottom: none; }
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+#md-notification::before { top: 10px; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
+header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
+.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
+.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
+.md-lang { color: rgb(180, 101, 77); }
+.html-for-mac .context-menu { --item-hover-bg-color: #E6F0FE; }
+
+
+
+
+
+ .typora-export p, .typora-export .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = 'is-node'><h1><a name='header-n0' class='md-header-anchor '></a>Database Interview Questions</h1><p><strong>1.  What is database or database management systems (DBMS)? and – What’s  the  difference between file and database? Can files qualify as a  database?</strong></p><p><strong>Answer :</strong>  Database provides a systematic and organized way of storing, managing  and retrieving from 1 collection of logically related information.
+  Secondly the information has to be  persistent, that means even after the application is closed the  information should be persisted.</p><p>Finally it  should provide an independent way of accessing data and should not be  dependent on the application to access the information.</p><p>Main  difference between a simple file and database that database has  independent way (SQL) of accessing information while simple files do not  File meets the storing, managing and retrieving part of a database but  not the independent way of accessing data. Many experienced programmers  think that the main difference is that file can not provide multi-user  capabilities which a DBMS provides. But if we look at some old COBOL and  C programs where file where the only means of storing data, we can see  functionalities like locking, multi-user etc provided very efficiently.  So it’s a matter of debate if some interviewers think this as a main  difference between files and database accept it… going in to debate is  probably loosing a job.</p><p><strong>2.</strong> <strong>What is SQL ?</strong></p><p><strong>Answer :</strong>  SQL stands for Structured Query Language.SQL is an ANSI (American  National Standards Institute) standard computer language for accessing  and manipulating database systems. SQL statements are used to retrieve  and update data in a database.</p><p><strong>3.</strong> <strong>What’s difference between DBMS and RDBMS ?</strong></p><p><strong>Answer :</strong>  DBMS provides a systematic and organized way of storing, managing and  retrieving from  collection of logically related information. RDBMS also  provides what DBMS provides but above that it provides relationship  integrity. So in short we can say</p><p>RDBMS = DBMS + REFERENTIAL INTEGRITY</p><p>These  relations are defined by using “Foreign Keys” in any RDBMS.Many DBMS  companies claimed there DBMS product was a RDBMS compliant, but  according to industry rules and regulations if the DBMS fulfills the  twelve CODD rules it’s truly a RDBMS. Almost all DBMS (SQL SERVER,  ORACLE etc) fulfills all the twelve CODD rules and are considered as  truly RDBMS.</p><p><strong>5. What are E-R diagrams?</strong></p><p><strong>Answer:</strong>  E-R diagram also termed as Entity-Relationship diagram shows relationship between various tables in the database. .</p><p><strong>6.  How many types of relationship exist in database designing?</strong></p><p><strong>Answer:</strong> There are three major relationship models:-
+  One-to-one
+  One-to-many
+  Many-to-many</p><p><strong>7. What are DML and DDL statements?</strong></p><p><strong>Answer :</strong> DML stands for Data Manipulation Statements. They update data values in table. Below are the most important DDL statements:-</p><p>=&gt;SELECT – gets data from a database table</p><p>=&gt; UPDATE – updates data in a table</p><p>=&gt; DELETE – deletes data from a database table</p><p>=&gt; INSERT INTO – inserts new data into a database table</p><p>DDL stands  for Data definition Language. They change structure of the database  objects like table, index etc. Most important DDL statements are as  shown below:-
+  =&gt;CREATE TABLE – creates a new table in the database.</p><p>=&gt;ALTER TABLE – changes table structure in database. =&gt;DROP TABLE – deletes a table from database</p><p>=&gt; CREATE INDEX – creates an index =&gt; DROP INDEX – deletes an index</p><p><strong>8. How do we select distinct values from a table?</strong></p><p><strong>Answer :</strong> DISTINCT keyword is used to return only distinct values. Below is syntax:- Column age and Table pcdsEmp</p><p>SELECT DISTINCT age FROM pcdsEmp</p><p><strong>9.  What is Like operator for and what are wild cards?</strong></p><p><strong>Answer :</strong>  LIKE operator is used to match patterns. A “%” sign is used to define  the pattern. Below SQL statement will return all words with letter “S”</p><p>SELECT * FROM pcdsEmployee WHERE EmpName LIKE ‘S%’</p><p>Below SQL statement will return all words which end with letter “S” SELECT * FROM pcdsEmployee WHERE EmpName LIKE ‘%S’</p><p>Below SQL statement will return all words having letter “S” in between SELECT * FROM pcdsEmployee WHERE EmpName LIKE ‘%S%’</p><p>“<em>”  operator (we can read as “Underscore Operator”). “</em>” operator is the  character defined at that point. In the below sample fired a query  Select name from pcdsEmployee where name like ‘_s%’ So all name where  second letter is “s” is returned.</p><p><strong>10.</strong>  <strong>Can you explain Insert, Update and Delete query?</strong></p><p><strong>Answers :</strong>  Insert statement is used to insert new rows in to table. Update to  update existing data in the table. Delete statement to delete a record  from the table. Below code snippet for Insert, Update and Delete :-</p><p>INSERT INTO pcdsEmployee SET name=’rohit’,age=’24’;</p><p>UPDATE pcdsEmployee SET age=’25’ where name=’rohit’;</p><p>DELETE FROM pcdsEmployee WHERE name = ‘sonia’;</p><p><strong>11. What is order by clause?</strong></p><p><strong>Answer</strong> : ORDER BY clause helps to sort the data in either ascending order to descending order.</p><p>Ascending order sort query</p><p>SELECT name,age FROM pcdsEmployee ORDER BY age ASC</p><p>Descending order sort query</p><p>SELECT name FROM pcdsEmployee ORDER BY age DESC</p><p><strong>12. What is the SQL ” IN ” clause?</strong></p><p><strong>Answer :</strong>  SQL IN operator is used to see if the value exists in a group of  values. For instance the below SQL checks if the Name is either ‘rohit’  or ‘Anuradha’</p><p>SELECT * FROM pcdsEmployee WHERE name IN (‘Rohit’,’Anuradha’)</p><p>Also you can specify a not clause with the same.</p><p>SELECT * FROM pcdsEmployee WHERE age NOT IN (17,16)</p><p><strong>13. Can you explain the between clause?</strong></p><p><strong>Answer :</strong> Below SQL selects employees born between ’01/01/1975′ AND ’01/01/1978′ as per mysql</p><p>SELECT * FROM pcdsEmployee WHERE DOB BETWEEN ‘1975-01-01’ AND ‘2011-09-28’</p><p><strong>14.  we have an employee salary table how do we find the second highest from it?</strong></p><p><strong>Answer :</strong> below Sql Query find the second highest salary</p><p>SELECT *  FROM pcdsEmployeeSalary a WHERE (2=(SELECT COUNT(DISTINCT(b.salary))  FROM pcdsEmployeeSalary b WHERE b.salary&gt;=a.salary))</p><p><strong>15</strong>. <strong>What are different types of joins in SQL?</strong></p><p><strong>Answer :</strong> INNER JOIN:  Inner join shows matches only when they exist in both tables. Example in  the below SQL there are two tables Customers and Orders and the inner  join in made on Customers.Customerid and Orders.Customerid. So this SQL  will only give you result with customers who have orders. If the  customer does not have order it will not display that record.</p><p>SELECT Customers.<em>, Orders.</em> FROM Customers INNER JOIN Orders ON Customers.CustomerID =Orders.CustomerID</p><p>LEFT OUTER  JOIN: Left join will display all records in left table of the SQL  statement. In SQL below customers with or without orders will be  displayed. Order data for customers without orders appears as NULL  values. For example, you want to determine the amount ordered by each  customer and you need to see who has not ordered anything as well. You  can also see the LEFT OUTER JOIN as a mirror image of the RIGHT OUTER  JOIN (Is covered in the next section) if you switch the side of each  table.</p><p>SELECT Customers.<em>, Orders.</em> FROM Customers LEFT OUTER JOIN Orders ON Customers.CustomerID =Orders.CustomerID</p><p>RIGHT  OUTER JOIN: Right join will display all records in right table of the  SQL statement. In SQL below all orders with or without matching customer  records will be displayed. Customer data for orders without customers  appears as NULL values. For example, you want to determine if there are  any orders in the data with undefined CustomerID values (say, after a  conversion or something like it). You can also see the RIGHT OUTER JOIN  as a mirror image of the LEFT OUTER JOIN if you switch
+  the side of each table.</p><p>SELECT Customers.<em>, Orders.</em> FROM Customers RIGHT OUTER JOIN Orders ON Customers.CustomerID =Orders.CustomerID</p><p><strong>16.</strong>  <strong>What is “CROSS JOIN”? or What is Cartesian product?</strong></p><p><strong>Answer :</strong>  “CROSS JOIN” or “CARTESIAN PRODUCT” combines all rows from both tables.  Number of rows will be product of the number of rows in each table. In  real life scenario I can not imagine where we will want to use a  Cartesian product. But there are scenarios where we would like  permutation and combination probably Cartesian would be the easiest way  to achieve it.</p><p><strong>17. How to select the first record in a given set of rows?</strong></p><p><strong>Answer :</strong> Select top 1 * from sales.salesperson</p><p><strong>18. What is the default “-SORT ” order for a SQL?</strong></p><p><strong>Answer  :</strong> ASCENDING</p><p><strong>19.</strong> <strong>What is a self-join?</strong></p><p><strong>Answer :</strong> If we want to join two instances of the same table we can use self-join.</p><p><strong>20.</strong> <strong>What’s the difference between DELETE and TRUNCATE ?</strong></p><p><strong>Answer :</strong> Following are difference between them:</p><p>=&gt;&gt;DELETE  TABLE syntax logs the deletes thus making the delete operations low.  TRUNCATE table does not log any information but it logs information  about deallocation of data page of the table. So TRUNCATE table is  faster as compared to delete table.</p><p>=&gt;&gt;DELETE table can have criteria while TRUNCATE can not.</p><p>=&gt;&gt; TRUNCATE table can not have triggers.</p><p><strong>21. What’s the difference between “UNION” and “UNION ALL” ?</strong></p><p><strong>Answer :</strong>   UNION SQL syntax is used to select information from two tables. But it  selects only distinct records from both the table. , while UNION ALL  selects all records from both the tables.</p><p><strong>22. What is ” Group by ” clause?</strong></p><p><strong>Answer :</strong> “Group by” clause group similar data so that aggregate values can be derived.</p><p><strong>23. What is the difference between “HAVING” and “WHERE” clause?</strong></p><p><strong>Answer:</strong> “HAVING” clause is used to specify filtering criteria for “GROUP BY”, while “WHERE” clause applies on normal SQL.</p><p><strong>24. What is a Sub-Query?</strong></p><p><strong>Answer :</strong>  A query nested inside a SELECT statement is known as a subquery and is  an alternative to complex join statements. A subquery combines data from  multiple tables and returns results that are inserted into the WHERE  condition of the main query. A subquery is always enclosed within  parentheses and returns a column. A subquery can also be referred to as  an inner query and the main query as an outer query. JOIN gives better  performance than a subquery when you have to check for the existence of  records.</p><p>For  example, to retrieve all EmployeeID and CustomerID records from the  ORDERS table that have the EmployeeID greater than the average of the  EmployeeID field, you can create a nested query, as shown:</p><p>SELECT DISTINCT EmployeeID, CustomerID FROM ORDERS WHERE EmployeeID &gt; (SELECT AVG(EmployeeID) FROM ORDERS)</p><p><strong>25. What are Aggregate and Scalar Functions?</strong></p><p><strong>Answer :</strong>  Aggregate and Scalar functions are in built function for counting and  calculations.  Aggregate functions operate against a group of values but  returns only one value.</p><p>AVG(column) :- Returns the average value of a column
+  COUNT(column) :- Returns the number of rows (without a NULL value) of a column</p><p>COUNT(*) :- Returns the number of selected rows
+  MAX(column) :- Returns the highest value of a column</p><p>MIN(column) :- Returns the lowest value of a column</p><p>Scalar functions operate against a single value and return value on basis of the single value.</p><p>UCASE(c) :- Converts a field to upper case</p><p>LCASE(c) :- Converts a field to lower case
+  MID(c,start[,end]) :- Extract characters from a text field
+  LEN(c) :- Returns the length of a text</p><p><strong>26. Can you explain the SELECT INTO Statement?</strong> </p><p><strong>Answer :</strong>  SELECT INTO statement is used mostly to create backups. The below SQL  backsup the  Employee table in to the EmployeeBackUp table. One point to  be noted is that the structure of pcdsEmployeeBackup and pcdsEmployee  table should be same.</p><p>SELECT * INTO pcdsEmployeeBackup FROM pcdsEmployee</p><p><strong>27.</strong>  <strong>What is a View?</strong></p><p><strong>Answer :</strong> View is a virtual table which is created on the basis of the result set returned by the select statement.
+  CREATE VIEW [MyView] AS SELECT * from pcdsEmployee where LastName = ‘singh’</p><p>In order to query the view SELECT * FROM [MyView]</p><p><strong>28.  What is SQL injection ?</strong></p><p><strong>Answer :</strong>  It is a Form of attack on a database-driven Web site in which the  attacker executes unauthorized SQL commands by taking advantage of  insecure code on a system connected to the Internet, bypassing the  firewall. SQL injection attacks are used to steal information from a  database from which the data would normally not be available and/or to  gain access to an organization’s host computers through the computer  that is hosting the database.</p><p>SQL injection attacks typically are easy to avoid by ensuring that a system has strong input validation.
+  As name suggest we inject SQL which can be relatively dangerous for the database. Example this is a simple SQL
+  SELECT email, passwd, login_id, full_name FROM members WHERE email = ‘x’</p><p>Now somebody does not put “x” as the input but puts “x ; DROP TABLE members;”. So the actual SQL which will execute is :-
+  SELECT email, passwd, login_id, full_name FROM members WHERE email = ‘x’ ; DROP TABLE members;
+  Think what will happen to your database.</p><p><strong>29.</strong> <strong>What is Data Warehousing ?</strong></p><p><strong>Answer :</strong>  Data Warehousing is a process in which the data is stored and accessed  from central location and is meant to support some strategic decisions.  Data Warehousing is not a requirement for Data mining. But just makes  your Data mining process more efficient.</p><p>Data  warehouse is a collection of integrated, subject-oriented databases  designed to support the decision-support functions (DSF), where each  unit of data is relevant to some moment in time.</p><p><strong>30. What are Data Marts?</strong></p><p><strong>Answer :</strong>  Data Marts are smaller section of Data Warehouses. They help data  warehouses collect data. For example your company has lot of branches  which are spanned across the globe. Head-office of the company decides  to collect data from all these branches for anticipating market. So to  achieve this IT department can setup data mart in all branch offices and  a central data warehouse where all data will finally reside.</p><p><strong>31. What is Data mining ?</strong></p><p><strong>Answer :</strong>  Data mining is a concept by which we can analyze the current data from  different perspectives and summarize the information in more useful  manner. It’s mostly used either to derive some valuable  information  from the existing data or to predict sales to increase customer market.  There are two basic aims of Data mining:-</p><p><strong>32. What are indexes? What are B Trees?</strong></p><p><strong>Answer :</strong>  Index makes your search faster. So defining indexes to your database  will make your search faster.Most of the indexing fundamentals use  “B-Tree” or “Balanced-Tree” principle. It’s not a principle that is  something is created by SQL Server or ORACLE but is a mathematical  derived fundamental.In order that “B-tree” fundamental work properly  both of the sides should be balanced.</p><p><strong>33.  What are the two types of indexes and explain them in detail? or What’s  the difference between clustered and non-clustered indexes?</strong></p><p><strong>Answer :</strong> There are basically two types of indexes:- Clustered Indexes. Non-Clustered Indexes.</p><p>In  clustered index the non-leaf level actually points to the actual data.In  Non-Clustered index the leaf nodes point to pointers which then point  to actual data.</p></div>
+</body>
+</html>
