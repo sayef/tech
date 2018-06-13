@@ -34,42 +34,58 @@ You  are  to  write  (F)LEX  and   YACC/BISON  specification  files  (e.g.,  sub
 
 ### Sample input#1
 
+```
 b = b + 1;
- if(b > a){b = 2 + c;} else{b = d – 2;}
- a = c + b * d;
+if(b > a){b = 2 + c;} else{b = d – 2;}
+a = c + b * d;
+```
+
+
 
 ### Sample output#1
 
+```
 t1 = 1
- t2 = b + t1
- if t2 > a goto label1
- t3 = 2
- t4 = t3 + c
- goto label2
- label1:
- t5 = 2
- t6 = d – t5
- label2:
- t7 = b * d
- t8 = c + t7
- a = t8
+t2 = b + t1
+if t2 > a goto label1
+t3 = 2
+t4 = t3 + c
+goto label2
+label1:
+t5 = 2
+t6 = d – t5
+label2:
+t7 = b * d
+t8 = c + t7
+a = t8
+```
+
+
 
 ### 
 
 ### Sample input#2
 
+```
 while ( a+3 ) { a = a – 1; }
+```
+
+
 
 ### Sample output#2
 
+```
 label1: t1 = 3
- t2 = a + 3
- if t2 = 0 goto label2
- t3 = 1
- t4 = a – t3
- a = t4
- goto label1
- label2 :
+t2 = a + 3
+if t2 = 0 goto label2
+t3 = 1
+t4 = a – t3
+a = t4
+goto label1
+label2 :
+```
+
+
 
 ### My Source code: [Simple Parser (Three-Address Code) using Lex and Yacc](https://github.com/Sayef/Simple-Parser-Using-Lex-and-Yacc)
 

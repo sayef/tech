@@ -15,5 +15,5 @@ Gone through a long way; very close to the end of  my student life. Looking for 
 7. [Object Oriented Programming](https://cdn.rawgit.com/sayef/tech/master/blog/revise-your-cs-course/oop-interview-questions.html)
 8. [Operating System](https://cdn.rawgit.com/sayef/tech/master/blog/revise-your-cs-course/os-interview-questions.html)
 9. [Design Pattern](https://cdn.rawgit.com/sayef/tech/master/blog/revise-your-cs-course/design-pattern-interview-questions.html)
-10. [Interview Question Collection](https://cdn.rawgit.com/sayef/tech/master/blog/revise-your-cs-course/interview-questions-collection.html)
+10. [Interview Question Collection](https://cdn.rawgit.com/sayef/tech/master/blog/revise-your-cs-course/therap2015csedu.html)
 
