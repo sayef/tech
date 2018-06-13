@@ -22,7 +22,9 @@ _**Candidate:**_ (A bit excited and speaking quickly) A binary search tree is so
 **_Interviewer:_** Why do you need links to parent nodes?  
 The candidate draws a tree, as shown in Figure 9-1.
 
-[![](http://sketchingdream.com/blog/wp-content/uploads/2015/10/1.png)](http://sketchingdream.com/blog/wp-content/uploads/2015/10/1.png)_Figure 9-1. Nodes in a tree have links to parents, which are drawn with dashed arrows._
+![](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/10/1.png)
+
+Figure 9-1. Nodes in a tree have links to parents, which are drawn with dashed arrows._
 
 **_Candidate:_** (Explaining while pointing to her drawing) If all nodes except the root in a tree have links to their parents, this problem is equivalent to finding the first common node in two intersected lists. A path in the tree can be viewed as a list connected by links to parents, starting from a leaf to the root. For example, if the input two nodes are the  
 nodes _h_ and _f_, the node _h_ is on the path though _h_ → _e_ → _b_ → _a_, and the node _f_ is on the path though _f_ → _c_ → _a_. Node _a_ is the first common node on these two paths, and it is also the lowest ancestor of the nodes _h_ and _f_.  
@@ -36,7 +38,9 @@ _**Interviewer:**_ It is only a bit more difficult than the previous two problem
 **_Candidate:_** (Explaining while drawing Figure 9-2) Let’s assume the two given nodes are _d_ and _i_. The tree is scanned with the pre-order traversal algorithm. Note that the subtrees of node _a_ contain both node _d_ and _i_, so we move on to check whether the subtrees of node _b_ and _c_ contain the given nodes. Since both nodes _d_ and _i_ are in the subtree of  
 node _b_, we continue to check whether these two nodes are contained in the subtrees of nodes _d_ and _e_, which are children of _b_. The subtree rooted at node _d_ does not contain node _i_, and the subtree rooted at node _e_ does not contain node _d_. Therefore, node _b_ is the first node whose subtrees contain two input nodes but its children nodes do not, and it is the lowest ancestor of _d_ and _i_.
 
-[![2](http://sketchingdream.com/blog/wp-content/uploads/2015/10/2.jpg)](http://sketchingdream.com/blog/wp-content/uploads/2015/10/2.jpg)_Figure 9-2. Nodes in a tree do not have links to parents._
+![2](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/10/2.jpg)
+
+_Figure 9-2. Nodes in a tree do not have links to parents._
 
 **_Interviewer:_** It seems that your solution visits nodes multiple times. For instance, when you check whether the subtree root at _a_ contains node _i_, nodes _h_, _i_, and _j_ will be visited. When you check whether the subtree root at _b_ contains _i_, nodes _h_, _i_, and _j_ will be visited again. Is it possible to visit each node only once?  
 _**Candidate:**_ (Ponders for more than two minutes) Can I use auxiliary space?  

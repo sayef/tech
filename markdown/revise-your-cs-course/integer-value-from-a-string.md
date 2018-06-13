@@ -8,35 +8,22 @@ _Listing 9-1: C++ Code for the Member Initialization Order_
 
 ```c++
 class A {
-
   private:
-
    int n1;
-
    int n2;
-
    public:
-
    A(): n2(0), n1(n2 + 2) {   
-
  }
 
   void Print() {
-
       std::cout << "n1: " << n1 << ", n2: " << n2 << std::endl;
-
     }
-
  };
 
  int main(int argc, char* argv[]) {
-
-   A a;
-
+   	A a;
     a.Print();
-
     return 0;
-
 }
 ```
 
@@ -58,18 +45,12 @@ _Listing 9-2. C++ Code to Convert a String to an Integer (Version 1)_
 
 ```c++
 int StrToInt(char* string) {
-
-  int number = 0;
-
-     while(*string != 0) {
-
-     number = number * 10 + *string - '0';
-
-     ++string;
-
-  }
-
- return number;
+  	int number = 0;
+   	while(*string != 0) {
+    	number = number * 10 + *string - '0';
+     	++string;
+  	}
+ 	return number;
 }
 ```
 
@@ -84,23 +65,14 @@ _Listing 9-3. C++ Code to Convert a String to an Integer (Version 2)_
 
 ```c++
 int StrToInt(char* string) {
-
   if(string == NULL)
-
      return 0;
-
-     int number = 0;
-
-     while(*string != 0) {
-
-     number = number * 10 + *string - '0';
-
-     ++string;
-
+  int number = 0;
+  while(*string != 0) {
+  	number = number * 10 + *string - '0';
+  	++string;
   }
-
   return number;
-
 }
 ```
 
@@ -129,63 +101,36 @@ enum Status {kValid = 0, kInvalid};
 int g_nStatus = kValid;
 
 int StrToInt(const char* str) {
-
     g_nStatus = kInvalid;
-
     int num = 0;
-
     if(str != NULL) {
-
        const char* digit = str; 
-
        bool minus = false;
-
        if(*digit == '+')
-
            digit ++;
-
        else if(*digit == '-') {
-
            digit ++;
-
            minus = true;
-
        }
 
        while(*digit != '\0') {
-
           if(*digit >= '0' && *digit <= '9') {
-
               num = num * 10 + (*digit - '0');
-
               digit++;
-
           }
-
           else {
-
              num = 0;
-
              break;
-
           }
-
        }
 
        if(*digit == '\0') {
-
            g_nStatus = kValid;
-
            if(minus)
-
            num = 0 - num;
-
        }
-
     }
-
  return num;
-
 }
 ```
 
@@ -216,81 +161,47 @@ enum Status {kValid = 0, kInvalid};
 int g_nStatus = kValid;
 
 int StrToInt(const char* str) {
-
    g_nStatus = kInvalid;
-
    long long num = 0;
-
    if(str != NULL && *str != '\0') {
-
       bool minus = false;
-
       if(*str == '+')
-
           str ++;
-
       else if(*str == '-') {
-
           str ++;
-
           minus = true;
-
       }
 
       if(*str != '\0') {
-
           num = StrToIntCore(str, minus);
-
       }
-
   }
 
   return (int)num;
-
 }
 
 long long StrToIntCore(const char* digit, bool minus) {
-
    long long num = 0;
-
    while(*digit != '\0') {
-
       if(*digit >= '0' && *digit <= '9') {
-
           int flag = minus ? -1 : 1;
-
           num = num * 10 + flag * (*digit - '0');
-
           if((!minus && num > 0x7FFFFFFF)   || (minus && num < (signed int)0x80000000)) {
-
              num = 0;
-
              break;
-
           }
-
           digit++;
-
       }
-
       else {
-
          num = 0;
-
          break;
-
       }
-
    }
 
    if(*digit == '\0') {
-
        g_nStatus = kValid;
-
    }
-
    return num;
-
 }
 ```
 

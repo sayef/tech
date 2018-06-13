@@ -42,34 +42,46 @@ This is a simple collection of  problems for interview from the basic knowledge 
 
 1\. Find the output –
 
+```c++
 int counter = 0, i;
+
 for(i=0;;i++) {
   if (i<100) continue;
       counter ++;
   if (counter == 100) break;
 }
+
 printf(%d%d”,i, counter);
+
+```
+
+
 
 2\. what is the value of EOF..?? ans=-1
 
 3\. What is the output?
 
+```c++
 class test{ };
+
 int main()
 {
   cout<<sizeof(test);
   return 0;
 }
+```
 
 ans: 1
 
 4\. What is the output?
 
+```c++
 class test
 {
   static int x;
   int* ptr;
 }
+
 int main()
 {
   test t1;
@@ -77,18 +89,27 @@ int main()
   return 0;
 }
 
+```
+
+
+
 ans: 4 4
 
 5\. What is the output?
 
+```c++
 char* fun()
 {
   return("samsung india");
 }
+
 main()
 {
   printf("%s",printf("electronics")+fun());
 }
+```
+
+
 
 ans: electronicsia
 
@@ -96,18 +117,24 @@ printf(“electronics”) first print “electronics” and return a int value w
 
 6\. What is the output?
 
+```c++
 main()
 {
   char* ptr={"samsung","electronics","india"};
   char**ptr1;
   ptr1=ptr;
   *ptr1++;
+
 }
+```
+
+
 
 ans:
 
 7\. What is the output?
 
+```c++
 main()
 {
   extern int i;
@@ -116,6 +143,9 @@ main()
     printf("%d",i);
   }
 }
+```
+
+
 
 ans: linker error
 
@@ -127,6 +157,7 @@ ans: since arr is an array of 10 variables of book type, so to access the next e
 
 9\. What is the output
 
+```c++
 main()
 {
   int i=10;
@@ -143,6 +174,9 @@ main()
      printf("its default");
   }
 }
+```
+
+
 
 ans: case constant already used..10 and 5*2 are same..error
 

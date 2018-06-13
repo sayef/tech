@@ -59,7 +59,7 @@
 
 1. Write the output of the following code snippet.
 
-```
+```java
 int =-5;
 system.out.println(i--);
 system.out.println(++i);

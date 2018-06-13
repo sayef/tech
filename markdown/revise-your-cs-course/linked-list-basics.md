@@ -9,7 +9,7 @@ A linked list is a data structure for storing, searching, manipulating and doing
 *   It can be made just as long as required.
 *   It does not waste memory space.
 
-[![1](http://sketchingdream.com/blog/wp-content/uploads/2015/08/1.png?w=300)](http://sketchingdream.com/blog/wp-content/uploads/2015/08/1.png)
+![1](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/1.png?w=300)
 
 Fig: Liked List Structure
 
@@ -22,15 +22,13 @@ For insertion:
 *   The nextpointer of the new record is set to link it to the item which is to follow it in the list.
 *   The nextpointer of the item which is to precede it must be modified to point to the new item.
 
-[![linked list insertion](http://sketchingdream.com/blog/wp-content/uploads/2015/08/2.png?w=300)](http://sketchingdream.com/blog/wp-content/uploads/2015/08/2.png)
-
-Fig: Linked List Insertion
+![linked list insertion](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/2.png?w=300)Fig: Linked List Insertion
 
 For deletion:
 
 *   The nextpointer of the item immediately preceding the one to be deleted is altered, and made to point to the item following the deleted item.
 
-[![Fig: Linekd List Deletion](http://sketchingdream.com/blog/wp-content/uploads/2015/08/3.png?w=300)](http://sketchingdream.com/blog/wp-content/uploads/2015/08/3.png)
+![Fig: Linekd List Deletion](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/3.png?w=300)
 
 Fig: Linekd List Deletion
 
@@ -49,7 +47,7 @@ Depending on the way in which the links are used to maintain adjacency, several 
 
 **2\. Circular linked list :** The pointer from the last element in the list points back to the first element.
 
-[![Fig: Circular Linked List](http://sketchingdream.com/blog/wp-content/uploads/2015/08/4.png?w=300)](http://sketchingdream.com/blog/wp-content/uploads/2015/08/4.png)
+![Fig: Circular Linked List](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/4.png?w=300)
 
 Fig: Circular Linked List
 
@@ -59,7 +57,7 @@ Fig: Circular Linked List
 *   The list can be traversed either forward or backward.
 *   Usually two pointers are maintained to keep track of the list, head and tail.
 
-[![Fig: Doubly Linked List](http://sketchingdream.com/blog/wp-content/uploads/2015/08/5.png?w=300)](http://sketchingdream.com/blog/wp-content/uploads/2015/08/5.png)
+![Fig: Doubly Linked List](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/5.png?w=300)
 
 Fig: Doubly Linked List
 
@@ -73,54 +71,68 @@ Fig: Doubly Linked List
 
 First of all we need to declare a user defined structure that will carry the information and same type of pointer variable that will lead us to the next address of the element of the list.Let’s declare a node which will hold student info containing roll, name, age of any student and the pointer to the next student of the list.
 
-_/\* definition of a data node for holding student information */
+``` c++
+/* definition of a data node for holding student information */
+
 struct node {
    int roll;
-   char name\[20\];
+   char name[20];
    int  age;
    struct node *next;
-};_
+};
+
+```
+
+
 
 Initialization of the head node of the list from where we will always start our look up for insertion, deletion and searching any node on any key i.e. name, roll or age –
 
-_/\* head points to first node in list*/
-struct node \*head = (struct node \*) NULL;_ 
+```
+/* head points to first node in list*/
+struct node *head = (struct node *) NULL;
+```
 
 Allocating memory for the newly created node will be looking like the following-
 
-_/\* this initialises a node, allocates memory for the node, and returns   */
-/\* a pointer to the new node. Must pass it the node details, name and id */
+```c++
+/* this initialises a node, allocates memory for the node, and returns   */
+/* a pointer to the new node. Must pass it the node details, name and id */
 struct node * initnode( int roll, char *name, int age )
 {
    struct node *ptr;
    ptr = (struct node *) calloc( 1, sizeof(struct node ) );
    if( ptr == NULL )                       /* error allocating node?      */
-       return (struct node *) NULL;        /* then return NULL, else      */
+       return (struct node ) NULL;         /* then return NULL, else      */
    else {                                  /* allocated node successfully */
        ptr->roll = roll;                   /* copy roll                   */
        strcpy( ptr->name, name );          /* fill in name details        */
        ptr->age = age;                     /* copy age                    */
        return ptr;                         /* return pointer to new node  */
    }
-}_ 
+}
+```
+
+
 
 Or if we want to allocate memory so simply C++ provides the following API. Just we need to assign the name and id.
 
-_struct node * initnode( int roll, char *name, int age )
+```c++
+struct node * initnode( int roll, char *name, int age )
 {
   node *ptr; 
   ptr = new node();
-
   str->roll = roll;
   strcpy(ptr->name, name);
   ptr->age = age;
-
   return ptr;
-}_
+}
+```
+
+
 
 So our first node is created-
 
-[![Fig: Head/First node](http://sketchingdream.com/blog/wp-content/uploads/2015/08/6.png?w=300)](http://sketchingdream.com/blog/wp-content/uploads/2015/08/6.png)
+![Fig: Head/First node](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/6.png?w=300)
 
 Fig: Head/First node
 
@@ -132,12 +144,15 @@ Fig: Head/First node
 
 If there are n number of nodes in the initial linked list:
 
-1.  Allocate n records, one by one.
-2.  Read in the fields of the records.
-3.  Modify the links of the records so that the chain is formed.
+1. Allocate n records, one by one.
 
- _node create_list(int n, node *head)	 	 
- {	 	 
+2. Read in the fields of the records.
+
+3. Modify the links of the records so that the chain is formed.
+
+  ```c++
+  node create_list(int n, node *head)	 	 
+  {	 	 
    int i, n;	 	 
    node *p; // pointer that will iterate through the list	 	 
    p = head; //first pointer must be the head node	 	 
@@ -145,16 +160,19 @@ If there are n number of nodes in the initial linked list:
        scanf("%d %s %d", &p->roll, p->name, &p->age); //put the values in p	 	 
        if(i==n) // for the last element	 	 
        {	 	 
-          p->next = NULL; //there is no next element and this is the end of the list	 	 
+          p->next = NULL; //there is no next element and this is the end of the list
        }	 	 
        else	 	 
        {	 	 
-          node \*nextNode = (node \*) malloc(sizeof(node)); //allocating memory for the next node	 	 
+          node *nextNode = (node *) malloc(sizeof(node)); //allocating memory for the next node	 	 
           p->next = nextNode; //pointing nextNode as the next node of p	 	 
           p = p->next; //now p be the next node for the sake of iteration	 	 
        }	 	 
     }	 	 
- }_
+   }
+  ```
+
+  
 
 * * *
 
@@ -162,26 +180,32 @@ If there are n number of nodes in the initial linked list:
 
 * * *
 
-1.  Follow the pointers.
-2.  Display the contents of the nodes as they are traversed.
-3.  Stop when the nextpointer points to NULL.
+1. Follow the pointers.
 
- _void display (node *head)	 	 
- {	 	 
+2. Display the contents of the nodes as they are traversed.
+
+3. Stop when the nextpointer points to NULL.
+
+  ```c++
+  void display (node *head)	 	 
+  {	 	 
    int i = 1;	 	 
    node *p;	 	 
    p = head;	 	 
    while (p != NULL)	 	 
    {	 	 
-      printf("\\nNode%d: %d %s %d", i, p->roll, p->name, p->age);	 	 
+      printf("\nNode%d: %d %s %d", i, p->roll, p->name, p->age);	 	 
       i++;	 	 
       p = p->next;	 	 
     }	 	 
-    printf("\\n");	 	 
- }_
+    printf("\n");	 	 
+   }
+  
+  ```
 
-**INSERTING AN ITEM IN THE LIST  
-**
+  
+
+**INSERTING AN ITEM IN THE LIST**  
 
 * * *
 
@@ -197,7 +221,7 @@ We have to maintain three different cases here.
 2.  A new node is made the head
 3.  New node points to the previously first element.
 
-[![Fig: Insert Before Head](http://sketchingdream.com/blog/wp-content/uploads/2015/08/7.png?w=300)](http://sketchingdream.com/blog/wp-content/uploads/2015/08/7.png)
+![Fig: Insert Before Head](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/7.png?w=300)
 
 Fig: Insert Before Head
 
@@ -207,7 +231,7 @@ Fig: Insert Before Head
 2.  Last node now points to a new node.
 3.  New node points to NULL.
 
-[![Fig: Insert at the end](http://sketchingdream.com/blog/wp-content/uploads/2015/08/8.png?w=300)](http://sketchingdream.com/blog/wp-content/uploads/2015/08/8.png)
+![Fig: Insert at the end](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/8.png?w=300)
 
 Fig: Insert at the end
 
@@ -215,19 +239,19 @@ Fig: Insert at the end
 2.  Previous node now points to the new node.
 3.  New node points to the next node.
 
-[![Fig: Insert at the middle of two nodes](http://sketchingdream.com/blog/wp-content/uploads/2015/08/9.png?w=300)](http://sketchingdream.com/blog/wp-content/uploads/2015/08/9.png)
+![Fig: Insert at the middle of two nodes](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/9.png?w=300)
 
 Fig: Insert at the middle of two nodes
 
 Let’s see the code snippet for the insertion into the existing list:  
 Convention: Put it before a key (here we assume roll). If there is no such key put it to the last.
 
- _//node new has new roll, name, age	 	 
+```c++
+ //node new has new roll, name, age	 	 
  //key is the roll of the node before which we will put the new node	 	 
- void insert (node \*head, node \*new, int key)	 	 
+ void insert (node *head, node *new, int key)	 	 
  {	 	 
- 	
-   node \*p, \*q;	 	 
+   node *p, *q;	 	 
    p = *head; // iterate starts from the head	 	 
    if(p == null)	 
    {	 	 
@@ -247,46 +271,59 @@ Convention: Put it before a key (here we assume roll). If there is no such key p
        new->next = NULL;	 	 
      }	 	 
    }	 	 
- }	 	 
+ }	 
+ 
 int main()	 	 
 {	 	 
    ......	 	 
+
    //assume the head and initial list is already created so far	 	 
+
    ......	 	 
-   node \*new = (node \*) malloc(sizeof(node));	 	 
+
+   node *new = (node *) malloc(sizeof(node));	 	 
    int key;	 	 
    scanf("%d %s %d %d", &new->roll, new->name, &new->age, &key); // take the info of new node and the key	 	 
    insert(head, new, key);	 	 
- }_ 
+ }
+```
+
+
 
 * * *
 
-**DELETING AN ITEM FROM THE LIST  
-**
+**DELETING AN ITEM FROM THE LIST**  
 
 * * *
 
 Here also we are required to delete a specified node. Say, the node whose roll field is given as the key for the deletion. Here also three conditions arise:  
 **Case 1: Delete the node at the beginning**
 
-[![Fig: Delete the head ](http://sketchingdream.com/blog/wp-content/uploads/2015/08/10.png?w=300)](http://sketchingdream.com/blog/wp-content/uploads/2015/08/10.png)
+![Fig: Delete the head ](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/10.png?w=300)
 
 Fig: Delete the first node / head
 
-**Case 1: Delete the node at the end  
-**
+**Case 2: Delete the node at the end**  
 
-[![Fig: Delete the last node](http://sketchingdream.com/blog/wp-content/uploads/2015/08/11.png?w=300)](http://sketchingdream.com/blog/wp-content/uploads/2015/08/11.png)
+
+![Fig: Delete the last node](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/11.png?w=300)
 
 Fig: Delete the last node
 
-**Case 1: Delete the node at the middle of two nodes  
-**  
-[![12](http://sketchingdream.com/blog/wp-content/uploads/2015/08/12.png?w=300)](http://sketchingdream.com/blog/wp-content/uploads/2015/08/12.png)Let’s see the code snippet which is as simple as the pictures say:
+**Case 3: Delete the node at the middle of two nodes**  
 
- _void delete (node *head, int key)	 	 
+
+
+![12](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/12.png?w=300)
+
+
+
+Let’s see the code snippet which is as simple as the pictures say:
+
+ ```c++
+void delete (node *head, int key)	 	 
  {	 	 
-    node \*p, \*q;	 	 
+    node *p, *q;	 	 
     p = *head; // iterate from the head	 	 
     if (p->roll == key) /* if the first item to be deleted */	 	 
     {	 	 
@@ -301,14 +338,15 @@ Fig: Delete the last node
            p = p->next;	 	 
         }	 	 
         if(p == NULL) /* Element not found */	 	 
-           printf("\\nNomatch :: deletion failed");	 	 
+           printf("\nNomatch :: deletion failed");	 	 
         else if (p->roll == key) /* Delete a node at the middle of two nodes */	 	 
-        {	 	 
+        {		 
            q->next = p->next; //Previous node now points the next node of the deleting item	 	 
            free (p); // free the memory allocated to the deleting node	 	 
         }	 	 
     }	 	 
- }_
+ }
+ ```
 
 So, these are the basics of the linked list. If you understand these operation, hope you will be able to implement the followings-
 

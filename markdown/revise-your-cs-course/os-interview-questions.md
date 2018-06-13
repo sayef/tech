@@ -36,16 +36,16 @@ A program in execution is called a process.
 
 Processes are of two types:
 
-\1. Operating system processes
- \2. User processes
+1. Operating system processes
+2. User processes
 
 **8. What are the states of a process?**
 
-\1. New
- \2. Running
- \3. Waiting
- \4. Ready
- \5. Terminated
+1. New
+2. Running
+3. Waiting
+4. Ready
+5. Terminated
 
 **9. What is starvation and aging?**
 
@@ -83,10 +83,10 @@ When many of free blocks are too small to satisfy any request then  fragmentatio
 
 **17. What are necessary conditions for dead lock?**
 
-\1. Mutual exclusion (where at least one resource is non-shareable)
- \2. Hold and wait (where a process holds one resource and waits for other resource)
- \3. No preemption (where the resources can’t be preempted)
- \4. Circular wait (where p[i] is waiting for p[j] to release a resource. )
+1. Mutual exclusion (where at least one resource is non-shareable)
+2. Hold and wait (where a process holds one resource and waits for other resource)
+3. No preemption (where the resources can’t be preempted)
+4. Circular wait (where p[i] is waiting for p[j] to release a resource. )
 
 **18. What is cache memory?**
 

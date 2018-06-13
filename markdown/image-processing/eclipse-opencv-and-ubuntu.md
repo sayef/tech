@@ -100,7 +100,9 @@ Now use the following commands to finish the installation.
 
 5.1 # Start Eclipse.
 
-5.2 # Go to **File -> New -> C/C++ Project**![Eclipse Tutorial Screenshot 0](http://docs.opencv.org/2.4/_images/a0.png)
+5.2 # Go to **File -> New -> C/C++ Project**
+
+![Eclipse Tutorial Screenshot 0](http://docs.opencv.org/2.4/_images/a0.png)
 
 5.3 # Choose a name for your project (i.e. DisplayImage). An **Empty Project** should be okay for this example.  Leave everything else by default. Press **Finish**.
 

@@ -13,11 +13,11 @@ Heap is a special tree-based data structure, that satisfies the following specia
 
 1. **Shape Property :** Heap data structure is always a Complete Binary Tree, which means all levels of the tree are fully filled.
 
-![Heap Sort 1](http://sketchingdream.com/blog/wp-content/uploads/2015/12/heap-sort-1.png)
+![Heap Sort 1](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/12/heap-sort-1.png)
 
 **2. Heap Property :** All nodes are either *[greater than or equal to]* or *[less  than or equal to]* each of its children. If the parent nodes are greater than their children, heap is called a **Max-Heap**, and if the parent nodes are smalled than their child nodes, heap is called **Min-Heap**.
 
-![Heap Sort 2.png](http://sketchingdream.com/blog/wp-content/uploads/2015/12/heap-sort-2.png)
+![Heap Sort 2.png](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/12/heap-sort-2.png)
 
  
 

@@ -1,6 +1,6 @@
 # Interview Conversations: Learn From The Reality
 
-[![](http://sketchingdream.com/blog/wp-content/uploads/2015/10/interview-board.jpg)](http://sketchingdream.com/blog/wp-content/uploads/2015/10/interview-board.jpg)
+![](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/10/interview-board.jpg)
 
 People share their interview experiences and conversations with the e-community. You can study those conversations to learn how to answer to the questions, or impress� the interviewer. You could learn what should do and what not while facing an interview. Here are some interview conversations:
 

@@ -148,7 +148,7 @@ A queue is a data structure that can simulates a list or stream of data. In this
 
 A binary tree is one type of data structure that has two nodes, a left node and a right node. In programming, binary trees are actually an extension of the linked list structures.
 
-** 31\. Which data structure is applied when dealing with a recursive function?**
+**31\. Which data structure is applied when dealing with a recursive function?**
 
 Recursion, which is basically a function that calls itself based on a terminating condition, makes use of the stack. Using LIFO, a call to a recursive function saves the return address so that it knows how to return to the calling function after the call terminates.
 

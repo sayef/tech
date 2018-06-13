@@ -6,7 +6,7 @@ It is called Bubble sort, because with each iteration the smaller  element in th
 
 Sorting takes place by stepping through all the data items one-by-one  in pairs and comparing adjacent data items and swapping each pair that  is out of order.
 
-![Bubble Sorting](http://sketchingdream.com/blog/wp-content/uploads/2015/12/bubble-sorting.png)Fig: Bubble Sorting
+![Bubble Sorting](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/12/bubble-sorting.png)Fig: Bubble Sorting
 
 #### Sorting using Bubble Sort Algorithm
 

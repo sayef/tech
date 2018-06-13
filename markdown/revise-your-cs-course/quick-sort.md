@@ -16,7 +16,7 @@ Hnece after the first pass, pivot will be set at its position, with  all the ele
 
 #### How Quick Sorting Works
 
-![Quick Sort](http://sketchingdream.com/blog/wp-content/uploads/2015/12/quick-sort.png)Fig: Quick Sort
+![Quick Sort](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/12/quick-sort.png)Fig: Quick Sort
 
  
 
