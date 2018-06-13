@@ -21,6 +21,4 @@ The following chart compares sorting algorithms on the various criteria outlined
 | Merge  Sort           | O(n*log(n)) | O(n*log(n)) | O(n*log(n)) | Depends  | On arrays, merge sort requires O(n) space; on linked lists, merge sort requires constant space |
 | Quicksort             | O(n*log(n)) | O(n*log(n)) | O(n^2)      | Constant | Randomly picking a pivot value (or shuffling the array prior to  sorting) can help avoid worst case scenarios such as a perfectly sorted  array. |
 
-Here is a nice video for feeling the simulation of different types of sorting.  
-
 ------

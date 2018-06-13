@@ -59,7 +59,9 @@ int partition(int a[], int p, int r)
 }
 ```
 
-[![Quick Sort Algorithm - Divide and Conquer](https://img.youtube.com/vi/-7pzsM6gxgY/0.jpg)](https://www.youtube.com/watch?v=-7pzsM6gxgY)
+
+
+<iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/-7pzsM6gxgY?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" allowfullscreen="true" style="border:0;" width="640" height="390"></iframe>
 
 #### Complexity Analysis of Quick Sort
 

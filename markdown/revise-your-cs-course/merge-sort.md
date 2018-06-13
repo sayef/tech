@@ -66,7 +66,7 @@ void merge(int a[], int p, int q, int r)
 }
 ```
 
-[![Merge Sort Algorithm](https://img.youtube.com/vi/TzeBrDU-JaY/0.jpg)](https://www.youtube.com/watch?v=TzeBrDU-JaY)
+<iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/TzeBrDU-JaY?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" allowfullscreen="true" style="border:0;" width="640" height="390"></iframe>
 
 #### Complexity Analysis of Merge Sort
 
