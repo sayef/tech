@@ -144,7 +144,7 @@ A queue is a data structure that can simulates a list or stream of data. In this
 
 **30\. What are binary trees?**
 
-[![binary tree](http://cdn.career.guru99.com/wp-content/uploads/2012/05/binarytree-239x300.png "binary tree")](http://career.guru99.com/wp-content/uploads/2012/05/binarytree.png)
+[![binary tree](http://cdn.career.guru99.com/wp-contenthttps://rawgit.com/sayef/tech/master/uploads/2012/05/binarytree-239x300.png "binary tree")](http://career.guru99.com/wp-contenthttps://rawgit.com/sayef/tech/master/uploads/2012/05/binarytree.png)
 
 A binary tree is one type of data structure that has two nodes, a left node and a right node. In programming, binary trees are actually an extension of the linked list structures.
 

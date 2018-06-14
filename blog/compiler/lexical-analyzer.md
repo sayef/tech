@@ -44,7 +44,7 @@ aabbbb TOKEN2
 4. Now Find whether any string gets accepted by these DFAs.
 5. Now check the longest sequence accepted by the DFAs. That’s all about algorithm.
 
-### Source Code : [Lexzical Analyzer ](https://github.com/Sayef/LexicalAnalyzer)
+### Source Code : [Lexical Analyzer ](https://github.com/Sayef/LexicalAnalyzer)
 
 ### How to run my code:
 

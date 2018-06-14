@@ -306,7 +306,7 @@ a) <http://www.eclipse.org/forums/index.php/m/790534/>
 
 b) <http://stackoverflow.com/questions/24897323/recipe-for-target-failed-error-in-eclipse-using-cygwin>
 
-This problem usually occurs when the wrong parser/compiler/linker is used. Try changing these:
+This problem usually occurs when the wrong parsercompiler/linker is used. Try changing these:
 
 Parser: Properties->C/C++ Build->Settings->Binary Parser
 

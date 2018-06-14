@@ -6,9 +6,9 @@
 
 Here I will share you  some workouts or assignments on compiler design with brief illustration.  The assignments were set by the course teacher Amin Ahsan Ali,  Assistant Professor, CSE, University of Dhaka. All problems were solved  by me and codes may not 100% bug free but clear enough to understand the  procedures. Hope you find the course interesting!
 
-1. [Constructing a Lexical Analyzer](https://rawgit.com/sayef/tech/master/blog/compiler/lexical-analyzer.html)
-2. [Writing a Parser using (F)LEX and YACC/BISON](https://rawgit.com/sayef/tech/master/blog/compiler/writing-a-parser-using-flex-and-yaccbison.html)
-3. [Generating Three-address Codes ](https://rawgit.com/sayef/tech/master/blog/compiler/generating-three-address-codes.html)
+1. [Constructing a Lexical Analyzer](lexical-analyzer.html)
+2. [Writing a Parser using (F)LEX and YACC/BISON](writing-a-parser-using-flex-and-yaccbison.html)
+3. [Generating Three-address Codes ](generating-three-address-codes.html)
 
 ------
 
