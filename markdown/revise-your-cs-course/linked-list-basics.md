@@ -9,7 +9,7 @@ A linked list is a data structure for storing, searching, manipulating and doing
 *   It can be made just as long as required.
 *   It does not waste memory space.
 
-![1](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/1.png?w=300)
+![1](https://rawgit.com/sayef/tech/master/uploads/2015/08/1.png?w=300)
 
 Fig: Liked List Structure
 
@@ -22,13 +22,13 @@ For insertion:
 *   The nextpointer of the new record is set to link it to the item which is to follow it in the list.
 *   The nextpointer of the item which is to precede it must be modified to point to the new item.
 
-![linked list insertion](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/2.png?w=300)Fig: Linked List Insertion
+![linked list insertion](https://rawgit.com/sayef/tech/master/uploads/2015/08/2.png?w=300)Fig: Linked List Insertion
 
 For deletion:
 
 *   The nextpointer of the item immediately preceding the one to be deleted is altered, and made to point to the item following the deleted item.
 
-![Fig: Linekd List Deletion](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/3.png?w=300)
+![Fig: Linekd List Deletion](https://rawgit.com/sayef/tech/master/uploads/2015/08/3.png?w=300)
 
 Fig: Linekd List Deletion
 
@@ -47,7 +47,7 @@ Depending on the way in which the links are used to maintain adjacency, several 
 
 **2\. Circular linked list :** The pointer from the last element in the list points back to the first element.
 
-![Fig: Circular Linked List](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/4.png?w=300)
+![Fig: Circular Linked List](https://rawgit.com/sayef/tech/master/uploads/2015/08/4.png?w=300)
 
 Fig: Circular Linked List
 
@@ -57,7 +57,7 @@ Fig: Circular Linked List
 *   The list can be traversed either forward or backward.
 *   Usually two pointers are maintained to keep track of the list, head and tail.
 
-![Fig: Doubly Linked List](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/5.png?w=300)
+![Fig: Doubly Linked List](https://rawgit.com/sayef/tech/master/uploads/2015/08/5.png?w=300)
 
 Fig: Doubly Linked List
 
@@ -132,7 +132,7 @@ struct node * initnode( int roll, char *name, int age )
 
 So our first node is created-
 
-![Fig: Head/First node](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/6.png?w=300)
+![Fig: Head/First node](https://rawgit.com/sayef/tech/master/uploads/2015/08/6.png?w=300)
 
 Fig: Head/First node
 
@@ -221,7 +221,7 @@ We have to maintain three different cases here.
 2.  A new node is made the head
 3.  New node points to the previously first element.
 
-![Fig: Insert Before Head](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/7.png?w=300)
+![Fig: Insert Before Head](https://rawgit.com/sayef/tech/master/uploads/2015/08/7.png?w=300)
 
 Fig: Insert Before Head
 
@@ -231,7 +231,7 @@ Fig: Insert Before Head
 2.  Last node now points to a new node.
 3.  New node points to NULL.
 
-![Fig: Insert at the end](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/8.png?w=300)
+![Fig: Insert at the end](https://rawgit.com/sayef/tech/master/uploads/2015/08/8.png?w=300)
 
 Fig: Insert at the end
 
@@ -239,7 +239,7 @@ Fig: Insert at the end
 2.  Previous node now points to the new node.
 3.  New node points to the next node.
 
-![Fig: Insert at the middle of two nodes](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/9.png?w=300)
+![Fig: Insert at the middle of two nodes](https://rawgit.com/sayef/tech/master/uploads/2015/08/9.png?w=300)
 
 Fig: Insert at the middle of two nodes
 
@@ -299,14 +299,14 @@ int main()
 Here also we are required to delete a specified node. Say, the node whose roll field is given as the key for the deletion. Here also three conditions arise:  
 **Case 1: Delete the node at the beginning**
 
-![Fig: Delete the head ](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/10.png?w=300)
+![Fig: Delete the head ](https://rawgit.com/sayef/tech/master/uploads/2015/08/10.png?w=300)
 
 Fig: Delete the first node / head
 
 **Case 2: Delete the node at the end**  
 
 
-![Fig: Delete the last node](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/11.png?w=300)
+![Fig: Delete the last node](https://rawgit.com/sayef/tech/master/uploads/2015/08/11.png?w=300)
 
 Fig: Delete the last node
 
@@ -314,7 +314,7 @@ Fig: Delete the last node
 
 
 
-![12](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/08/12.png?w=300)
+![12](https://rawgit.com/sayef/tech/master/uploads/2015/08/12.png?w=300)
 
 
 

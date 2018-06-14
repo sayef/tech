@@ -6,7 +6,7 @@ Selection sorting is conceptually the most simplest sorting  algorithm. This alg
 
 #### How Selection Sorting Works
 
-![Selection Sorting](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/12/selection-sorting.png)Fig:  Selection Sorting
+![Selection Sorting](https://rawgit.com/sayef/tech/master/uploads/2015/12/selection-sorting.png)Fig:  Selection Sorting
 
 In the first pass, the smallest element found is 1, so it is placed  at the first position, then leaving first element, smallest element is  searched from the rest of the elements, 3 is the smallest, so it is then  placed at the second position. Then we leave 1 nad 3, from the rest of  the elements, we search for the smallest and put it at third position  and keep doing this, until array is sorted.
 

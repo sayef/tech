@@ -15,7 +15,7 @@ It is a simple Sorting algorithm which sorts the array by  shifting elements one
 
  
 
-![Insertion Sorting](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/12/insertion-sorting.png)
+![Insertion Sorting](https://rawgit.com/sayef/tech/master/uploads/2015/12/insertion-sorting.png)
 
 Fig: Insertion Sorting
 

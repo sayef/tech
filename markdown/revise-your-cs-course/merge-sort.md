@@ -8,7 +8,7 @@ Merge Sort is quite fast, and has a time complexity of **O(n log n)**. It is als
 
 #### How Merge Sort Works
 
-![Merge Sort](https://cdn.rawgit.com/sayef/tech/master/uploads/2015/12/merge-sort.png)Fig: Merge Sort
+![Merge Sort](https://rawgit.com/sayef/tech/master/uploads/2015/12/merge-sort.png)Fig: Merge Sort
 
 Like we can see in the above example, merge sort first breaks the  unsorted list into sorted sublists, and then keep merging these  sublists, to finlly get the complete sorted list.
 

@@ -2,12 +2,12 @@
 
 There are many types of Sorting techniques, differentiated by their efficiency and space requirements. Following are some sorting techniques which we will be covering in next sections.
 
-1. [Bubble Sort](https://cdn.rawgit.com/sayef/tech/master/blog/revise-your-cs-course/bubble-sort.html)
-2. [Insertion Sort](https://cdn.rawgit.com/sayef/tech/master/blog/revise-your-cs-course/insertion-sort.html)
-3. [Selection Sort](https://cdn.rawgit.com/sayef/tech/master/blog/revise-your-cs-course/selection-sort.html)
-4. [Quick Sort](https://cdn.rawgit.com/sayef/tech/master/blog/revise-your-cs-course/quick-sort.html)
-5. [Merge Sort](https://cdn.rawgit.com/sayef/tech/master/blog/revise-your-cs-course/merge-sort.html)
-6. [Heap Sort](https://cdn.rawgit.com/sayef/tech/master/blog/revise-your-cs-course/heap-sort.html)
+1. [Bubble Sort](https://rawgit.com/sayef/tech/master/blog/revise-your-cs-course/bubble-sort.html)
+2. [Insertion Sort](https://rawgit.com/sayef/tech/master/blog/revise-your-cs-course/insertion-sort.html)
+3. [Selection Sort](https://rawgit.com/sayef/tech/master/blog/revise-your-cs-course/selection-sort.html)
+4. [Quick Sort](https://rawgit.com/sayef/tech/master/blog/revise-your-cs-course/quick-sort.html)
+5. [Merge Sort](https://rawgit.com/sayef/tech/master/blog/revise-your-cs-course/merge-sort.html)
+6. [Heap Sort](https://rawgit.com/sayef/tech/master/blog/revise-your-cs-course/heap-sort.html)
 
 The following chart compares sorting algorithms on the various criteria outlined above; the algorithms with higher constant terms appear first, though this is clearly an implementation-dependent concept and should only be taken as a rough guide when picking between sorts of the same big-O efficiency.
 
